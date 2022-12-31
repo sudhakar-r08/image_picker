@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+apply from: "../ktlint.gradle"
+
+android {
+    compileSdkVersion 33
+    defaultConfig {
+        applicationId "com.github.sudhakar.imagepicker.sample"
+        minSdkVersion 19
+        targetSdkVersion 33
+        versionCode 16
+        versionName "2.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    namespace 'com.github.sudhakar.imagepicker.sample'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation project(':imagepicker')
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.browser:browser:1.4.0'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.documentfile:documentfile:1.0.1'
+
+    implementation "androidx.activity:activity-ktx:1.6.1"
+    implementation "androidx.fragment:fragment-ktx:1.5.5"
+
+    //Image Loading Lib
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'androidx.databinding:databinding-runtime:7.3.1'
+
+    //Leakcanary
+    //debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test:core:1.5.0'
+
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
+    androidTestImplementation 'androidx.test:rules:1.5.0'
+    androidTestImplementation 'androidx.test:runner:1.5.1'
+}
