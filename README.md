@@ -1,26 +1,5 @@
 # 📸Image Picker Library for Android
 
-[![Download](https://jitpack.io/v/Dhaval2404/ImagePicker.svg)](https://jitpack.io/#Dhaval2404/ImagePicker)
-[![Releases](https://img.shields.io/github/release/dhaval2404/imagePicker/all.svg?style=flat-square)](https://github.com/Dhaval2404/ImagePicker/releases)
-[![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=19)
-![Build Status](https://github.com/Dhaval2404/ImagePicker/workflows/Build/badge.svg)
-![Language](https://img.shields.io/badge/language-Kotlin-orange.svg)
-[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-ImagePicker-green.svg?style=flat )]( https://android-arsenal.com/details/1/7510 )
-[![ktlint](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg)](https://ktlint.github.io/)
-[![PRWelcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Dhaval2404/ImagePicker)
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://opensource.org/licenses/Apache-2.0)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/Dhaval2404/ImagePicker/blob/master/LICENSE)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/Dhaval2404/ImagePicker.svg?style=social)](https://twitter.com/intent/tweet?text=Check+out+an+ImagePicker+library+to+Pick+an+image+from+the+Gallery+or+Capture+an+image+with+Camera.+https%3A%2F%2Fgithub.com%2FDhaval2404%2FImagePicker+%40dhaval2404+%23Android+%23Kotlin+%23AndroidDev)
-
-<div align="center">
-  <sub>Built with ❤︎ by
-  <a href="https://twitter.com/Dhaval2404">Dhaval Patel</a> and
-  <a href="https://github.com/dhaval2404/imagepicker/graphs/contributors">
-    contributors
-  </a>
-</div>
-<br/>
-
 Easy to use and configurable library to **Pick an image from the Gallery or Capture image using Camera**. It also allows to **Crop and Compresses the Image based on Aspect Ratio, Resolution and Image Size**.
 
 Almost 90% of the app that I have developed has an Image upload feature. Along with the image selection, Sometimes  I needed a crop feature for profile image for that I've used uCrop. Most of the time I need to compress the image as the image captured from the camera is more than 5-10 MBs and sometimes we have a requirement to upload images with specific resolution/size, in that case, image compress is the way to go option. To simplify the image pick/capture option I have created ImagePicker library. I hope it will be useful to all.
@@ -56,14 +35,6 @@ Almost 90% of the app that I have developed has an Image upload feature. Along w
 	}
 	```
 
-    ```groovy
-   implementation 'com.github.dhaval2404:imagepicker:2.1'
-    ```
-
-   **If you are yet to Migrate on AndroidX, Use support build artifact:**
-   ```groovy
-   implementation 'com.github.dhaval2404:imagepicker-support:1.7.1'
-    ```
 
 
 2. The ImagePicker configuration is created using the builder pattern.
@@ -298,107 +269,7 @@ Almost 90% of the app that I have developed has an Image upload feature. Along w
   * Library - Android Kitkat 4.4+ (API 19)
   * Sample - Android Kitkat 4.4+ (API 19)
 
-# ✔️Changelog
-
-### Version: 2.1
-  * Added uzbekistan translation (Special Thanks to Khudoyshukur Juraev)
-  * Removed requestLegacyExternalStorage flag
-  * Removed unused string resources
-
-### Version: 2.0
-
-  * Added arabic translation [#157](https://github.com/Dhaval2404/ImagePicker/pull/157)  (Special Thanks to [zhangzhu95](https://github.com/zhangzhu95))
-  * Added norwegian translation [#163](https://github.com/Dhaval2404/ImagePicker/pull/163) (Special Thanks to [TorkelV](https://github.com/TorkelV))
-  * Added german translation [#192](https://github.com/Dhaval2404/ImagePicker/pull/192) (Special Thanks to [MDXDave](https://github.com/MDXDave))
-  * Added method to return Intent for manual launching ImagePicker [#182](https://github.com/Dhaval2404/ImagePicker/pull/182) (Special Thanks to [tobiasKaminsky](https://github.com/tobiasKaminsky))
-  * Added support for android 11 [#199](https://github.com/Dhaval2404/ImagePicker/issues/199)
-  * Fixed android scope storage issue [#29](https://github.com/Dhaval2404/ImagePicker/issues/29)
-  * Removed storage permissions [#29](https://github.com/Dhaval2404/ImagePicker/issues/29)
-  * Fixed calculateInSampleSize leads to overly degraded quality [#152](https://github.com/Dhaval2404/ImagePicker/issues/152) (Special Thanks to [FlorianDenis](https://github.com/FlorianDenis))
-  * Fixed camera app not found issue [#162](https://github.com/Dhaval2404/ImagePicker/issues/162)
-  * Fixed Playstore requestLegacyExternalStorage flag issue [#199](https://github.com/Dhaval2404/ImagePicker/issues/199)
-
-### Version: 1.8
-
-  * Added dialog dismiss listener (Special Thanks to [kibotu](https://github.com/kibotu))
-  * Added text localization (Special Thanks to [yamin8000](https://github.com/yamin8000) and Jose Bravo)
-  * Fixed crash issue on missing camera app [#69](https://github.com/Dhaval2404/ImagePicker/issues/69)
-  * Fixed issue selecting images from download folder [#86](https://github.com/Dhaval2404/ImagePicker/issues/86)
-  * Fixed exif information lost issue [#121](https://github.com/Dhaval2404/ImagePicker/issues/121)
-  * Fixed crash issue on large image crop [#122](https://github.com/Dhaval2404/ImagePicker/issues/122)
-  * Fixed saving image in cache issue [#127](https://github.com/Dhaval2404/ImagePicker/issues/127)
-
-### Version: 1.7
-
-  * Added option to limit MIME types while choosing a gallery image (Special Thanks to [Marchuck](https://github.com/Marchuck))
-  * Introduced ImageProviderInterceptor, Can be used for analytics (Special Thanks to [Marchuck](https://github.com/Marchuck))
-  * Fixed .crop() opening gallery or camera twice [#32](https://github.com/Dhaval2404/ImagePicker/issues/32)
-  * Fixed FileProvider of the library clashes with the FileProvider of the app [#51](https://github.com/Dhaval2404/ImagePicker/issues/51) (Special Thanks to [OyaCanli](https://github.com/OyaCanli))
-  * Added option to set Storage Directory [#52](https://github.com/Dhaval2404/ImagePicker/issues/52)
-  * Fixed NullPointerException in FileUriUtils.getPathFromRemoteUri()  [#61](https://github.com/Dhaval2404/ImagePicker/issues/61) (Special Thanks to [himphen](https://github.com/himphen))
-  * Fixed UCropActivity Crash Android 4.4 (KiKat) [#82](https://github.com/Dhaval2404/ImagePicker/issues/82)
-  * Fixed PNG image saved as JPG after crop issue [#94](https://github.com/Dhaval2404/ImagePicker/issues/94)
-  * Fixed PNG image saved as JPG after compress issue [#105](https://github.com/Dhaval2404/ImagePicker/issues/105)
-  * Added Polish text translation [#115](https://github.com/Dhaval2404/ImagePicker/issues/115) (Special Thanks to [MarcelKijanka](https://github.com/MarcelKijanka))
-  * Failed to find configured root exception [#116](https://github.com/Dhaval2404/ImagePicker/issues/116)
-
-### Version: 1.6
-
-  * Improved UI/UX of sample app
-  * Removed Bitmap Deprecated Property [#33](https://github.com/Dhaval2404/ImagePicker/issues/33) (Special Thanks to [nauhalf](https://github.com/nauhalf))
-  * Camera opens twice when "Don't keep activities" option is ON [#41](https://github.com/Dhaval2404/ImagePicker/issues/41) (Special Thanks to [benji101](https://github.com/benji101))
-  * Fixed uCrop Crash Issue [#42](https://github.com/Dhaval2404/ImagePicker/issues/42)
-
-### Version: 1.5
-
-  * Fixed app crash issue, due to Camera Permission in manifest [#34](https://github.com/Dhaval2404/ImagePicker/issues/34)
-  * Added Option for Dynamic Crop Ratio. Let User choose aspect ratio [#36](https://github.com/Dhaval2404/ImagePicker/issues/36) (Special Thanks to [Dor-Sloim](https://github.com/Dor-Sloim))
-
-### Version: 1.4
-
-  * Optimized Uri to File Conversion (Inspired by [Flutter ImagePicker](https://github.com/flutter/plugins/tree/master/packages/image_picker))
-  * Removed redundant CAMERA permission [#26](https://github.com/Dhaval2404/ImagePicker/issues/26) (Special Thanks to [PerrchicK](https://github.com/PerrchicK))
-
-### Version: 1.3
-
-  * Sample app made compatible with Android Kitkat 4.4+ (API 19)
-  * Fixed Uri to File Conversion issue [#8](https://github.com/Dhaval2404/ImagePicker/issues/8) (Special Thanks to [squeeish](https://github.com/squeeish))
-
-### Version: 1.2
-
-  * Added Support for Inline Activity Result(Special Thanks to [soareseneves](https://github.com/soareseneves))
-  * Fixed issue [#6](https://github.com/Dhaval2404/ImagePicker/issues/6)
-  
-### Version: 1.1
-
-  * Optimized Compression Logic
-  * Replace white screen with transparent one.
-
-### Version: 1.0
-
-  * Initial Build
 
 ## 📃 Libraries Used
 * uCrop [https://github.com/Yalantis/uCrop](https://github.com/Yalantis/uCrop)
 * Compressor [https://github.com/zetbaitsu/Compressor](https://github.com/zetbaitsu/Compressor)
-
-### Let us know!
-
-We'll be really happy if you sent us links to your projects where you use our component. Just send an email to **dhavalpatel244@gmail.com** And do let us know if you have any questions or suggestion regarding the library.
-
-## License
-
-    Copyright 2019-2021, Dhaval Patel
-
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-         http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-    
